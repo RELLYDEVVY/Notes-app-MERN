@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: poppins-md;
+	src: url("./assets/Poppins-Medium.ttf") format("truetype");
+	font-display: swap;
+}
+@font-face {
+	font-family: poppins-bold;
+	src: url("./assets/Poppins-Bold.ttf") format("truetype");
+	font-display: swap;
+}
+
+.transparent {
+	background-color: transparent;
+}
+@layer base {
+	html {
+		font-family: poppins-md, Geneva, Verdana, sans-serif;
+		background-color: #ffffff;
+	}
+
+	body {
+		background-color: #ffffff;
+	}
+	.poppins-md {
+		font-family: poppins-md, Geneva, Verdana, sans-serif;
+	}
+	.poppins-bold {
+		font-family: poppins-bold, Geneva, Verdana, sans-serif;
+	}
+}
+@layer components {
+	.input-box {
+		font-family: poppins-md, Courier, monospace;
+		@apply bg-transparent w-full text-sm border-[1.5px] rounded mb-4 outline-none px-5 py-3;
+	}
+	.btn-primary {
+		font-family: poppins-md, Courier, monospace;
+		@apply w-full text-sm bg-primary text-white rounded p-2 my-1 hover:bg-blue-600;
+	}
+	.icon-btn {
+		@apply text-xl text-slate-300 cursor-pointer hover:text-primary;
+	}
+	.input-label {
+		@apply text-xs text-slate-400;
+	}
+}
